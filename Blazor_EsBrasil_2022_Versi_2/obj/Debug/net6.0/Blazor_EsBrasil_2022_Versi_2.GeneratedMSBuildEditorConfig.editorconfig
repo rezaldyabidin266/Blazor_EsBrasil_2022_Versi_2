@@ -1,0 +1,43 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = Blazor_EsBrasil_2022_Versi_2
+build_property.RootNamespace = Blazor_EsBrasil_2022_Versi_2
+build_property.ProjectDir = D:\VisualStudio2020\Blazor_EsBrasil_2022_Versi_2\Blazor_EsBrasil_2022_Versi_2\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\VisualStudio2020\Blazor_EsBrasil_2022_Versi_2\Blazor_EsBrasil_2022_Versi_2
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/VisualStudio2020/Blazor_EsBrasil_2022_Versi_2/Blazor_EsBrasil_2022_Versi_2/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VisualStudio2020/Blazor_EsBrasil_2022_Versi_2/Blazor_EsBrasil_2022_Versi_2/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VisualStudio2020/Blazor_EsBrasil_2022_Versi_2/Blazor_EsBrasil_2022_Versi_2/Component/Navigasi/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50XE5hdmlnYXNpXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-nbpgov1atp
+
+[D:/VisualStudio2020/Blazor_EsBrasil_2022_Versi_2/Blazor_EsBrasil_2022_Versi_2/Component/Navigasi/Navbar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50XE5hdmlnYXNpXE5hdmJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-tfmsq09nlr
+
+[D:/VisualStudio2020/Blazor_EsBrasil_2022_Versi_2/Blazor_EsBrasil_2022_Versi_2/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8hstrh4y03
+
+[D:/VisualStudio2020/Blazor_EsBrasil_2022_Versi_2/Blazor_EsBrasil_2022_Versi_2/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-z08dofndep

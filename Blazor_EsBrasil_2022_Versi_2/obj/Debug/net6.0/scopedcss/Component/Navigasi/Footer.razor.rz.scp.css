@@ -1,0 +1,53 @@
+.footer hr[b-nbpgov1atp] {
+  background: #D6D6D6;
+}
+.footer .acd[b-nbpgov1atp] {
+  padding-top: 1rem;
+}
+.footer .acd .accordion .accordion-item[b-nbpgov1atp] {
+  border-bottom: 0;
+}
+.footer .acd .accordion .accordion-item .accordion-button[b-nbpgov1atp] {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #212121;
+  padding-top: 0px;
+}
+.footer .acd .accordion .accordion-item .accordion-button:focus[b-nbpgov1atp] {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+.footer .acd .accordion .accordion-item .accordion-button:not(.collapsed)[b-nbpgov1atp] {
+  color: inherit;
+  background-color: none;
+}
+.footer .hr-toko[b-nbpgov1atp] {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: #D6D6D6;
+}
+.footer .judul-footer[b-nbpgov1atp] {
+  text-align: center;
+}
+.footer .judul-footer p[b-nbpgov1atp] {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #838383;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.footer .copyright[b-nbpgov1atp] {
+  text-align: center;
+}
+.footer .copyright p[b-nbpgov1atp] {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  color: #838383;
+  margin-bottom: 1.5rem;
+}

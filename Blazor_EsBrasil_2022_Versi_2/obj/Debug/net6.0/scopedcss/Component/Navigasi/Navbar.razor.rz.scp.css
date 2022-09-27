@@ -1,0 +1,54 @@
+.navbar .navbar-brand img[b-tfmsq09nlr] {
+  width: 100%;
+  max-width: 79px;
+  height: 100%;
+  object-fit: cover;
+}
+.navbar .btn-menu[b-tfmsq09nlr] {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.navbar .btn-menu i[b-tfmsq09nlr] {
+  color: white;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item[b-tfmsq09nlr] {
+  margin-right: 20px;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link[b-tfmsq09nlr] {
+  cursor: pointer;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  padding-bottom: 3px;
+  position: relative;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link[b-tfmsq09nlr]:after {
+  position: absolute;
+  left: 50%;
+  content: '';
+  height: 1px;
+  background: #fff;
+  transition: all 0.2s linear;
+  width: 0;
+  bottom: 0;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover[b-tfmsq09nlr]:after {
+  width: 100%;
+  left: 0;
+}
+.offcanvas .offcanvas-header img[b-tfmsq09nlr] {
+  width: 100%;
+  max-width: 79px;
+  object-fit: cover;
+  height: 100%;
+}
+.offcanvas .offcanvas-body .menu li[b-tfmsq09nlr] {
+  line-height: 48px;
+}
+.offcanvas .offcanvas-body .menu li a[b-tfmsq09nlr] {
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}

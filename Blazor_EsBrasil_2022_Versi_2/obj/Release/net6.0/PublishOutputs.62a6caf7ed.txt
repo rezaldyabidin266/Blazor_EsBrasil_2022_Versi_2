@@ -1,0 +1,1 @@
+D:\VisualStudio2020\Blazor_EsBrasil_2022_Versi_2\Blazor_EsBrasil_2022_Versi_2\obj\Release\net6.0\browser-wasm\PubTmp\Out\web.config

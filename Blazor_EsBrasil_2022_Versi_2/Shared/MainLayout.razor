@@ -1,0 +1,26 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime Js
+<style>
+    .x {
+        min-height: calc(100vh - 70px);
+    }
+</style>
+
+<div style="scroll-behavior: smooth !important;">
+    <header>
+        <Blazor_EsBrasil_2022_Versi_2.Component.Navigasi.Navbar></Blazor_EsBrasil_2022_Versi_2.Component.Navigasi.Navbar>
+    </header>
+    <div class="x">
+        @Body
+    </div>
+    <footer>
+        <Blazor_EsBrasil_2022_Versi_2.Component.Navigasi.Footer></Blazor_EsBrasil_2022_Versi_2.Component.Navigasi.Footer>
+    </footer>
+</div>
+
+@code{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await Js.InvokeVoidAsync("navbarHideShow");
+    }
+}

@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/app.css",
+    "inputFile": "wwwroot/css/app.less"
+  },
+  {
+    "outputFile": "Component/Navigasi/Navbar.razor.css",
+    "inputFile": "Component/Navigasi/Navbar.razor.less"
+  },
+  {
+    "outputFile": "Pages/Index.razor.css",
+    "inputFile": "Pages/Index.razor.less"
+  },
+  {
+    "outputFile": "Component/Navigasi/Footer.razor.css",
+    "inputFile": "Component/Navigasi/Footer.razor.less"
+  }
+]

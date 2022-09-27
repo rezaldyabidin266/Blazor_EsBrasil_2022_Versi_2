@@ -1,0 +1,95 @@
+﻿@inject IJSRuntime Js
+
+<style>
+
+    /* scroll auto hide classList Add*/
+    .scrolled-down {
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .scrolled-up {
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /*change background scroll navbar*/
+    .navbar.bg-merah {
+        background: linear-gradient(242.99deg, #FF001F 34.04%, #D10000 92.04%);
+        box-shadow: 0px 0px 10px rgba(230, 10, 10, 0.5);
+    }
+
+    .navbar.bg-transparent {
+        background: transparent;
+    }
+</style>
+
+<!--Navbar-->
+<nav id="scrollAutoHide" class="navbar px-3 pt-4 navbar-expand-lg fixed-top navbar-light align-items-center">
+    <div class="container">
+        <a class="navbar-brand">
+            <img src="asset/logo/logoPutih.webp" />
+        </a>
+
+        <!--Button Menu Mobile-->
+        <a class="navbar-toggler btn-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="far fa-bars"></i>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link active" onclick="document.getElementById('tentang_kami').scrollIntoView({behavior:'smooth'})" >Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'})" >Produk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="document.getElementById('toko').scrollIntoView({behavior:'smooth'})" >Toko</a>
+                </li>
+                   <li class="nav-item">
+                    <a onclick="document.getElementById('lowongan_kerja').scrollIntoView({behavior:'smooth'})" class="nav-link">Lowongan Kerja</a> <!--onclick="document.getElementById('lowongan_kerja').scrollIntoView({behavior:'smooth'})" -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="document.getElementById('hubungi_kami').scrollIntoView({behavior:'smooth'})" >Hubungi Kami</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Menu Mobile-->
+<div style="height:100vh" class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <img src="asset/logo/logoMerah.webp" />
+        <button type="button" class="btn-close text-reset " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" style="overflow-y: visible;">
+        <ul class="list-unstyled menu">
+            <li >
+                <a data-bs-dismiss="offcanvas" onclick="document.getElementById('tentang_kami').scrollIntoView({behavior:'smooth'})" >Tentang Kami</a> <!-- onclick="event.preventDefault();document.getElementById('tentang_kami').scrollIntoView({behavior:'smooth'}); return false;"-->
+            </li>
+            <li>
+                <a data-bs-dismiss="offcanvas" onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'})">Produk</a>
+            </li>
+            <li>
+                <a data-bs-dismiss="offcanvas" onclick="document.getElementById('toko').scrollIntoView({behavior:'smooth'})">Toko</a>
+            </li>
+            <li>
+                <a data-bs-dismiss="offcanvas" onclick="document.getElementById('mitra').scrollIntoView({behavior:'smooth'})">Mitra Kami</a>
+            </li>
+            <li>
+                <a data-bs-dismiss="offcanvas" onclick="document.getElementById('lowongan_kerja').scrollIntoView({behavior:'smooth'})">Lowongan Kerja</a>
+            </li>
+            <li>
+                <a data-bs-dismiss ="offcanvas" onclick="document.getElementById('hubungi_kami').scrollIntoView({behavior:'smooth'})">Hubungi Kami</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+    }
+}

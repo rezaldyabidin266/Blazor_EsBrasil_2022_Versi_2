@@ -1,0 +1,365 @@
+﻿@page "/"
+@using Blazor_EsBrasil_2022_Versi_2.Properties.Class
+@inject IJSRuntime Js
+
+<PageTitle>Es Brasil</PageTitle>
+
+<style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-pagination > .swiper-pagination-bullet {
+        background-color: #9D0000;
+        width: 6px;
+        height: 6px;
+    }
+
+    .swiper-pagination > .swiper-pagination-bullet-active {
+        background-color: white;
+    }
+
+    .red-bullet > .swiper-pagination-bullet {
+        background-color: #c7c7c7;
+        width: 6px;
+        height: 6px;
+    }
+
+
+    .red-bullet > .swiper-pagination-bullet-active {
+        background: #DD1C1C;
+    }
+
+</style>
+
+<div>
+
+    <!--Top Banner-->
+    <section class="section-top-banner ">
+        <div class="container container-top-banner">
+            <div class="text-layout d-flex align-items-center justif-content-center h-100">
+                <p class="text-setting mx-auto">
+                    “Temukan banyak<br />
+                    <span>manfaat</span> di setiap Varian <br />
+                    Rasa <span>Es Brasil</span> kami.“
+                </p>
+            </div>
+            <div class="logo-glow text-center">
+                <img class="" src="asset/logo/logoPutih.webp" />
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="tentang_kami" class="container section-tentang-kami">
+        <div class="row px-4 align-items-center">
+            <div class="col-12 col-md-6 tentang-kami-text">
+                <p>
+                    Produk rumahan yang merupakan
+                    usaha keluarga dan berasal dari purwokerto.
+                    Produk ini awalnya yakni Es Mambo atau
+                    sejenis Es Lilin yang dijajakan keliling. Rasa
+                    pertama yang dibuat adalah Kacang
+                    Hijau. Hingga saat ini sudah ada
+                    9 Varian Rasa.
+                </p>
+            </div>
+            <div class="col-12 col-md-6 d-none d-md-block tentang-kami-image">
+                <img class="mx-auto mt-2" src="asset/background/es.webp" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Varian Rasa -->
+    <section id="produk" class="container-fluid section-varian-rasa">
+        <div class="row px-3">
+            <div class="box-swiper">
+                <div class="varian-rasa-judul">
+                    <p>Varian Rasa</p>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper swiperVarianRasa">
+                    <div class="swiper-wrapper">
+
+                        <!-- Loop Varian Rasa-->
+                        <Virtualize Items="@varianRasa" Context="varian">
+                            <div data-hash="slide-@varian.url" class="swiper-slide">
+                                <div class="wrap-slider d-flex flex-column">
+                                    <div class="box-ice">
+                                        <img class="mx-auto" src="@varian.url" alt="Es Brasil" />
+                                    </div>
+                                    <div class="text-ice">
+                                        <p>@varian.rasa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Virtualize>
+
+                    </div>
+                </div>
+                <div class="swiper-pagination white-bullet"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Es Sehat -->
+    <section class="container-fluid section-es-sehat">
+        <div class="wrapping-es-sehat">
+            <p class="text-es-sehat">
+                <span>ES Sehat</span>,<br />
+                Tanpa Bahan Pengawet <br />
+                100% Gula Asli
+            </p>
+        </div>
+    </section>
+
+    <!-- Garis Tengah-->
+    <div class="container">
+        <div class="row mx-3">
+            <hr class="hr-toko" />
+        </div>
+    </div>
+
+    <!-- Bg Merah Start -->
+    <div style="background: linear-gradient(222.33deg, #FF001F 37.17%, #D10000 95.75%);">
+
+        <!-- Tersedia di TOKO-->
+        <section id="toko" class="container-fluid section-toko bg-white">
+            <div class="row px-4">
+                <div class="judul-toko">
+                    <p>Tersedia di Toko</p>
+                </div>
+
+                <!--Swiper Tersedia di Toko-->
+                <div class="swiper swiperToko">
+                    <div class="swiper-wrapper">
+
+                        <!-- Loop Toko-->
+                        <Virtualize Items="@tokoKoordinat" Context="toko">
+                            <div class="swiper-slide">
+                                <div class="wrap-slider d-flex flex-column">
+                                    <div class="box-toko">
+                                        <img src="@toko.url" alt="Toko Es Brasil" />
+                                    </div>
+                                    <p class="nama-toko">@toko.name</p>
+                                    <a class="google-maps-toko">Lihat di Google Map</a>
+                                </div>
+                            </div>
+                        </Virtualize>
+
+                    </div>
+                </div>
+
+                <div class="swiper-pagination red-bullet"></div>
+            </div>
+        </section>
+
+        <!-- Mitra Kami -->
+        <section id="mitra" class="container-fluid section-mitra-kami">
+            <div class="row px-3">
+                <div class="judul-mitra">
+                    <p>Mitra Kami</p>
+                </div>
+
+                <div class="swiper swiperMitra">
+                    <div class="swiper-wrapper">
+
+                        <!-- Loop Mitra-->
+                        <Virtualize Items="@mitra" Context="url">
+                            <div class="swiper-slide">
+                                <div class="wrap-slider d-flex flex-column">
+                                    <div class="box-mitra">
+                                        <img class="mx-auto" alt="Mitra Es Brasil" src="@url" />
+                                    </div>
+                                </div>
+                            </div>
+                        </Virtualize>
+
+                    </div>
+                </div>
+                <div class="swiper-pagination mitra-bullet"></div>
+            </div>
+        </section>
+
+    </div> <!--Bg Merah End-->
+
+    <!-- Lowongan Section -->
+    <section id="lowongan_kerja" class="container-fluid section-lowongan">
+        <div class="row px-5">
+            <div class="col-12 col-sm-6 d-none d-sm-block img-ilustrasi ">
+                <img class="ms-auto" src="asset/illustrator/bergabung-revisi-2.webp" />
+            </div>
+            <div class="col-12 col-sm-6 text-lowongan d-flex align-items-center justify-content-center">
+                <div class="text-wrap">
+                    <p>
+                        Tertarik Untuk <br />
+                        Bekerja dengan
+                        Kami ?
+                    </p>
+                    <div class="button-lowongan">
+                        <a target="_blank" href="https://loker.esbrasilonline.com/" class="wrap-lowongan">
+                            <button class="btn-lowongan mx-auto mx-sm-0 d-flex align-items-center">
+                                Selengkapnya 
+                                <i class="fas fa-angle-right ms-2"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Garis Tengah-->
+    <div class="container">
+        <div class="row mx-3">
+            <hr class="hr-toko" />
+        </div>
+    </div>
+
+    <!-- Hubungi Kami -->
+    <section id="hubungi_kami" class="container section-hubungi-kami">
+        <div class="row px-3">
+
+            <div class="col-12 col-xl-4 content-kiri">
+                <p class="judul-hubungi-kami text-center text-xl-start">
+                    Hubungi Kami
+                </p>
+                <div class="d-flex flex-column justify-content-around align-items-center align-items-xl-start btns">
+                    <div class="btns-wrap">
+                        <a target="_blank" href="https://wa.me/6281586683813" class="wa-marketing d-flex align-items-center justify-content-center justify-content-sm-start "><i class="fab fa-whatsapp me-2 fa-lg"></i>Whatsapp Marketing</a>
+                    </div>
+                    <div class="btns-wrap">
+                        <a target="_blank" href="https://wa.me/6285773993494" class="wa-admin d-flex align-items-center justify-content-center justify-content-sm-start"><i class="fab fa-whatsapp me-2 fa-lg"></i>Whatsapp Admin</a>
+                    </div>
+                    <div class="btns-wrap">
+                        <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=esbrasilbgr@gmail.com" class="btn-email d-flex align-items-center justify-content-center justify-content-sm-start"><i class="fas fa-envelope me-2 text-white fa-lg"></i>esbrasilbgr@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-xl-8 content-kanan p-0">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31707.432584525282!2d106.78742127675245!3d-6.593473062929643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5ce13b160e5%3A0x7530fab10640fa13!2sAPOTIK%20PRIMA!5e0!3m2!1sid!2sid!4v1662710070520!5m2!1sid!2sid"
+                            width="100%" style="border:0; border-radius:15px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Height 100%-->
+                </div>
+
+                <p class="alamat d-block d-sm-none">
+                    Jl. Raya Pajajaran No.25,
+                    Babakan, Kecamatan<br />  Bogor Tengah,
+                    Kota Bogor, Jawa Barat 16128.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Garis Tengah-->
+    <div class="container">
+        <div class="row mx-3">
+            <hr class="hr-toko" />
+        </div>
+    </div>
+
+    <!-- Jam Operasional-->
+    <section class="container-fluid section-jam-operasional">
+        <div class="judul-jam-operasional">
+            <p>Jam Operasional</p>
+        </div>
+        <div class="waktu-jam-operasional">
+            <p class="kerja">
+                Senin - Sabtu <br />
+                08 : 00 - 18 : 00
+            </p>
+            <p class="libur">
+                Minggu Libur
+            </p>
+        </div>
+    </section>
+
+    <!-- Sosmed -->
+    <section class="container-fluid section-sosmed">
+        <div class="row px-4">
+            <div class="card-sosmed mx-auto">
+                <div class="judul-sosmed">
+                    <p>Ikuti kami di Sosmed</p>
+                </div>
+                <div class="wrap-sosmed mx-auto d-flex justify-content-evenly flex-wrap">
+                    <div class="mb-3">
+                        <a target="_blank" href="https://www.facebook.com/Esbrasilbgr" class="fcb d-flex align-items-center"><i class="fab fa-facebook me-2 fa-lg"></i>Es Brasil</a>
+                    </div>
+                    <div class="">
+                        <a target="_blank" href="https://www.instagram.com/esbrasil_bogor/" class="ig d-flex align-items-center"><i class="fab fa-instagram me-2 fa-lg"></i>esbrasil_bogor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await Js.InvokeVoidAsync("swiperVarianRasa");
+        await Js.InvokeVoidAsync("swiperToko");
+        await Js.InvokeVoidAsync("swiperMitra");
+
+    }
+
+    protected List<VarianRasa> varianRasa = new List<VarianRasa>()
+    {
+        new VarianRasa{ url =      "asset/varian rasa/coklat.webp", rasa = "Coklat Chip"},
+            new VarianRasa{ url =    "asset/varian rasa/durian.webp", rasa = "Durian"},
+              new VarianRasa{ url =    "asset/varian rasa/kacangHijau.webp", rasa = "Kacang Hijau"},
+                new VarianRasa{ url =    "asset/varian rasa/kelapa.webp", rasa = "Kelapa"},
+                  new VarianRasa{ url =    "asset/varian rasa/ketan.webp", rasa = "Ketan"},
+                    new VarianRasa{ url =    "asset/varian rasa/kopi.webp", rasa = "Kopi"},
+                      new VarianRasa{ url =    "asset/varian rasa/rujak.webp", rasa = "Rujak"},
+                        new VarianRasa{ url =    "asset/varian rasa/sirsak.webp", rasa = "Sirsak"},
+    };
+
+    protected List<TokoKoordinat> tokoKoordinat = new List<TokoKoordinat>()
+    {
+        new TokoKoordinat{url = "asset/tersedia/dutaBuah.webp", name = "Duta Buah", latitude = 0, longitude = 0},
+        new TokoKoordinat{url = "asset/tersedia/gubugUdang.webp", name = "Gubug Udang", latitude = 0, longitude = 0},
+        new TokoKoordinat{url = "asset/tersedia/kebunBuah.webp", name = "Kebun Buah", latitude = 0, longitude = 0},
+        new TokoKoordinat{url = "asset/tersedia/kedaiSunda.webp", name = "Kedai Sunda", latitude = 0, longitude = 0},
+        new TokoKoordinat{url = "asset/tersedia/mangEngking.webp", name = "Mang Engking", latitude = 0, longitude = 0},
+        new TokoKoordinat{url = "asset/tersedia/max10.webp", name = "Max-10", latitude = 0, longitude = 0},
+        new TokoKoordinat{url = "asset/tersedia/sederhana.webp", name = "Sederhana", latitude = 0, longitude = 0},
+        new TokoKoordinat{url = "asset/tersedia/sinarAlam.webp", name = "Sinar Alam", latitude = 0, longitude = 0},
+        new TokoKoordinat{url = "asset/tersedia/trio.webp", name = "Trio", latitude = 0, longitude = 0},
+    };
+
+    protected List<string> mitra = new List<string>()
+    {
+        "asset/mitra/aeon.webp",
+        "asset/mitra/baksoPmi.webp",
+        "asset/mitra/baksoTitoti.webp",
+        "asset/mitra/bebekRenon.webp",
+        "asset/mitra/carefour.webp",
+        "asset/mitra/cheapAndFresh.webp",
+        "asset/mitra/cibiuk.webp",
+        "asset/mitra/daily.webp",
+        "asset/mitra/foodhall.webp",
+        "asset/mitra/hero.webp",
+        "asset/mitra/kebunBuah.webp",
+        "asset/mitra/littleMinang.webp",
+        "asset/mitra/lottemart.webp",
+        "asset/mitra/lulu.webp",
+        "asset/mitra/mangEngking.webp",
+        "asset/mitra/nagaSwalayan.webp",
+        "asset/mitra/sindangReret.webp",
+        "asset/mitra/sopJanda.webp",
+        "asset/mitra/supermarket.webp",
+        "asset/mitra/topBuah.webp",
+        "asset/mitra/trio.webp",
+        "asset/mitra/yogya.webp",
+    };
+
+}

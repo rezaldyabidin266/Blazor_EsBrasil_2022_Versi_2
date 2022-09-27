@@ -1,0 +1,80 @@
+﻿.navbar {
+    .navbar-brand {
+        img {
+            width: 100%;
+            max-width: 79px;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .btn-menu {
+        border: none;
+        outline: none;
+        box-shadow: none;
+
+        i {
+            color: white;
+        }
+    }
+
+    .navbar-collapse {
+
+        .navbar-nav {
+
+            .nav-item {
+                margin-right: 20px;
+
+                .nav-link {
+                    cursor: pointer;
+                    color: white;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-weight: 400;
+                    padding-bottom: 3px;
+                    position: relative;
+                    &:after {
+                        position: absolute;
+                        left: 50%;
+                        content: '';
+                        height: 1px;
+                        background: #fff;
+                        transition: all 0.2s linear;
+                        width: 0;
+                        bottom: 0;
+                    }
+
+                    &:hover:after {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offcanvas {
+    .offcanvas-header {
+        img {
+            width: 100%;
+            max-width: 79px;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    .offcanvas-body {
+        .menu {
+            li {
+                line-height: 48px;
+
+                a {
+                    font-family: 'Josefin Sans', sans-serif;
+                    color: black;
+                    font-size: 18px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
